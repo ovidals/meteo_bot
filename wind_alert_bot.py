@@ -1,8 +1,9 @@
 def main():
-    message = (
-        f"🚀 Test GitHub Actions + CallMeBot\n"
-        f"Hora: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-    )
+    print("Script arrancado")
 
-    print(message)
-    send_whatsapp(message)
+    print("PHONE existe:", bool(os.environ.get("CALLMEBOT_PHONE")))
+    print("APIKEY existe:", bool(os.environ.get("CALLMEBOT_APIKEY")))
+
+    send_whatsapp("🚀 TEST DESDE GITHUB ACTIONS")
+
+    print("Mensaje enviado")
